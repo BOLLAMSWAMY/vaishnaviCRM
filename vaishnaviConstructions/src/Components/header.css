@@ -1,0 +1,41 @@
+
+.header{
+    height: 37px;
+    box-shadow: 0px 0px 5px grey;
+}
+.header>div{
+width: 300px;
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+float: right;
+margin-right: 15%;
+}
+.header a{
+width: 40%;
+color: #700895;
+font-family: Reem Kufi;
+font-size: 14px;
+font-weight: 500;
+line-height: 21px;
+text-align: left;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+.header button{
+    width: 129.5px;
+    height: 100%;
+    border: none;
+    background-color: #DC3E3D;
+    color: #fff;
+    text-wrap: nowrap;
+    font-family: Reem Kufi;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+
+}
