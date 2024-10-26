@@ -1,0 +1,43 @@
+.navbar{
+    width: 100vw;
+    /* padding: 20px 0px; */
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar-left{
+width: 25%;
+}
+.navbar-right{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar-right a{
+    color: #838383;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 37px;
+    text-align: left;  
+}
+.navbar-right button{
+    width: 220.26px;
+    height: 45px;
+    border: none;
+    background-color: #F85200;
+    color: #fff;
+    border-radius: 169.79px;
+    font-family: Kumbh Sans;
+    font-size: 18.95px;
+    font-weight: 500;
+    line-height: 21.32px;
+    letter-spacing: 0.5921052694320679px;
+    text-align: center;
+}
+.active-nav{
+    color: #DC3E3D;
+    border-bottom: 2px solid #DC3E3D;
+}
