@@ -41,7 +41,7 @@ const Navbar = () => {
               handleActiveNav('contact')
             }}>Contact Us</span></Link>
 
-          <Link to="/brochure"><button>Download Brochure</button></Link>
+           <a href="../assets/VaishnaviConstructionsBrochure.pdf" download='VaishnaviConstructionsBrochure.pdf'><button>Download Brochure</button></a>
         </div>
             <div className="nav-mobile-handle" onClick={handleMobileNav}>
               <i className="fa-solid fa-bars"></i>

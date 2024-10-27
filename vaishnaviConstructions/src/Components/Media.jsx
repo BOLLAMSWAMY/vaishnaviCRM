@@ -100,7 +100,7 @@ const Media = () => {
   return (
     <>
     <div className='banner d-flex align-items-center'>
-<h1 className='mediaTitle'>Media & Clients</h1>
+<h1 className='mediaTitle'>Media</h1>
     </div>
 
     <div>

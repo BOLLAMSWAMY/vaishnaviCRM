@@ -4,6 +4,10 @@ import AboutUs from './Components/AboutUs'
 import Services from './Components/Services'
 import Media from './Components/Media'
 import ContactUs from './Components/ContactUs'
+import VaishnaviRmc from './Components/VaishnaviRMC'
+import VaishnaviCrushers from './Components/VaishnaviCrushers'
+import VaishnaviBricks from './Components/VaishnaviBricks'
+import MrkBricks from './Components/MrkBricks'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -32,6 +36,14 @@ function App() {
     <Route path='/media' element={<Media/>}>
     </Route>
     <Route path='/contactus' element={<ContactUs/>}>
+    </Route>
+    <Route path='/mrk-bricks' element={<MrkBricks/>}>
+    </Route>
+    <Route path='/vaishnavi-bricks' element={<VaishnaviBricks/>}>
+    </Route>
+    <Route path='/vaishnavi-crushers' element={<VaishnaviCrushers/>}>
+    </Route>
+    <Route path='/vaishnavi-rmc' element={<VaishnaviRmc/>}>
     </Route>
     </Routes>
     </BrowserRouter>

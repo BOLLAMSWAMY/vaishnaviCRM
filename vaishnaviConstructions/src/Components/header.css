@@ -1,9 +1,9 @@
 
-.header{
+.headerNew{
     height: 37px;
     box-shadow: 0px 0px 5px grey;
 }
-.header>div{
+.headerNew>div{
 width: 300px;
 height: 100%;
 display: flex;
@@ -12,7 +12,7 @@ align-items: center;
 float: right;
 margin-right: 15%;
 }
-.header a{
+.headerNew a{
 width: 40%;
 color: #700895;
 font-family: Reem Kufi;
@@ -25,7 +25,7 @@ justify-content: space-around;
 align-items: center;
 
 }
-.header button{
+.headerNew button{
     width: 129.5px;
     height: 100%;
     border: none;
@@ -41,7 +41,7 @@ align-items: center;
 }
 
 @media only screen and (max-width: 426px){
-    .header{
+    .headerNew{
         display: none;
     }
 }

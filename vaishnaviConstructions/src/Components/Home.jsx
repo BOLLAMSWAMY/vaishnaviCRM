@@ -1,5 +1,6 @@
 // import React from 'react'
 import './Home.css'
+import './HomeMediaQueries.css'
 import isoImg from '../assets/isoImg.png'
 import Whatsapp from '../assets/whatsapp.png'
 import lastSec from '../assets/last-section.png'
@@ -24,7 +25,16 @@ import site2 from '../assets/site2.png'
 import site3 from '../assets/site3.png'
 import site4 from '../assets/site4.png'
 import sustainabilityImage from '../assets/sustainabilityImage.png'
+import testimonyImg from '../assets/testimonyImg.png'
+import { useState } from 'react'
+import { Link } from "react-router-dom";
 function Home() {
+
+  let [activeItem,setActiveItem]=useState('Premiere Mix')
+
+  function handleActiveItem(active){
+    setActiveItem(active)
+  }
   return (
     <>
     <div className="home-hero">
@@ -90,12 +100,8 @@ function Home() {
   </div>
   <div className="section-one-img">
     <div>
-      
         <i className='fa-solid fa-chevron-left'></i>
-      
-      
         <i className='fa-solid fa-chevron-right'></i>
-      
     </div>
   </div>
 </div>
@@ -124,8 +130,8 @@ function Home() {
 </div>
 
 <div className="section-three">
-  <div className='section-three-card'>
-    <div>
+<div className='section-three-card'>
+  <div>
 <div>
 <h2>Vaishnavi RMC</h2>
 <p>All types of Concrete Grades <br /> Rachaloor, Thukkuguda / Pati ghanpur,Patancheru </p>
@@ -134,7 +140,6 @@ function Home() {
 <i className='fa-solid fa-arrow-right'></i>
 </div>
     </div>
-
   </div>
   <div className='section-three-card'>
 <div>
@@ -248,13 +253,21 @@ RMC‘s full form is Ready Mixed Concrete. It is manufactured in a batching plan
   <div className="projects-grade-left">
     <h3>Mixers</h3>
     <ul>
-      <li>Premiere Mix</li>
-      <li>Residential Mix</li>
-      <li>Micro Tech Mix</li>
-      <li>Special Products</li>
+      <li onClick={()=>{
+        handleActiveItem('Premiere Mix')
+      }} className={activeItem === 'Premiere Mix' ? 'activeList':''}>Premiere Mix</li>
+      <li onClick={()=>{
+        handleActiveItem('Residential Mix')
+      }} className={activeItem === 'Residential Mix' ? 'activeList':''}>Residential Mix</li>
+      <li onClick={()=>{
+        handleActiveItem('Micro Tech Mix')
+      }} className={activeItem === 'Micro Tech Mix' ? 'activeList':''}>Micro Tech Mix</li>
+      <li onClick={()=>{
+        handleActiveItem('Special Products')
+      }} className={activeItem === 'Special Products' ? 'activeList':''}>Special Products</li>
     </ul>
 </div>
-<div className="projects-grade-right">
+<div className={activeItem === 'Premiere Mix'?'projects-grade-right':'d-none projects-grade-right'}>
   <div>
     <h1>M10 GRADE</h1>
     <p><strong>Mix Ratio:</strong> 1:3:6 (1 cement, 3 sand and 6 aggregate)</p>
@@ -271,7 +284,129 @@ RMC‘s full form is Ready Mixed Concrete. It is manufactured in a batching plan
     <p><strong>Suitability:</strong> Used as PCC (Plain Cement Concrete) in the construction of levelling course, bedding for footing, concrete roads, etc.</p>
   </div>
 </div>
+
+
+<div className={activeItem === 'Residential Mix'?'projects-grade-right':'d-none projects-grade-right'}>
+  <div>
+    <h1>M25 GRADE</h1>
+    <p><strong>Mix Ratio:</strong> 1:1:2 (1 cement, 1 sand and 2 aggregate)</p>
+    <p><strong>Suitability:</strong>  Used as RCC (Reinforced Cement Concrete) in the construction of slabs, beams, columns, footings, etc.</p>
   </div>
+  <div>
+    <h1>M30 GRADE</h1>
+    <p><strong>Mix Ratio:</strong>Moderate Mix Designs as per IS-10262-2009</p>
+    <p><strong>Suitability:</strong>   Used as RCC (Reinforced Cement Concrete) in the construction of slabs, beams, columns, footings, etc.</p>
+  </div>
+  <div>
+    <h1>M35 GRADE</h1>
+    <p><strong>Mix Ratio:</strong> Moderate Mix Designs as per IS-10262-2009</p>
+    <p><strong>Suitability:</strong> Used as RCC (Reinforced Cement Concrete) in the construction of slabs, beams, columns, footings, etc.</p>
+  </div>
+</div>
+
+  
+  
+<div className={activeItem === 'Micro Tech Mix'?'projects-grade-right':'d-none projects-grade-right'}>
+ <div className='mt-5'>
+  <p>A-MIX’s high-strength concrete has high compressive strength and is appropriate for high-rise buildings, long-span bridges, ultra-thin white topping and constructions in coastal areas, etc.
+  </p>
+  <p className='mt-5'>The concrete exhibits superior mechanical properties, including strength, durability, resistance to chemical attack and workability. It is achieved by adding higher but calibrated concentrations of mineral admixtures as compared to conventional concrete.</p>
+ </div>
+</div>
+  
+
+ 
+ 
+<div className={activeItem === 'Special Products'?'projects-grade-right':'d-none projects-grade-right'}>
+ <div className='mt-5'>
+  <p>A-MIX’s high-performance concrete with superior mechanical properties, including strength, durability, resistance to chemical attack and workability, is most suited for specialised applications.
+  </p>
+<ul style={{listStyleType:'disc'}} className='ms-5 fw-bold'>
+  <li>Floor Nation Mix</li>
+  <li>Fiber Mix</li>
+  <li>Enviro Mix</li>
+  <li>Poro Foam Mix</li>
+  <li>Waterproof Mix</li></ul> 
+</div>
+</div>
+
+
+  </div>
+
+{/* <div>
+  <div className="projects-grade-left">
+    <h3>Mixers</h3>
+    <ul>
+      <li>Premiere Mix</li>
+      <li>Residential Mix</li>
+      <li>Micro Tech Mix</li>
+      <li>Special Products</li>
+    </ul>
+</div>
+<div className="projects-grade-right">
+  <div>
+    <h1>M25 GRADE</h1>
+    <p><strong>Mix Ratio:</strong> 1:1:2 (1 cement, 1 sand and 2 aggregate)</p>
+    <p><strong>Suitability:</strong>  Used as RCC (Reinforced Cement Concrete) in the construction of slabs, beams, columns, footings, etc.</p>
+  </div>
+  <div>
+    <h1>M30 GRADE</h1>
+    <p><strong>Mix Ratio:</strong>Moderate Mix Designs as per IS-10262-2009</p>
+    <p><strong>Suitability:</strong>   Used as RCC (Reinforced Cement Concrete) in the construction of slabs, beams, columns, footings, etc.</p>
+  </div>
+  <div>
+    <h1>M35 GRADE</h1>
+    <p><strong>Mix Ratio:</strong> Moderate Mix Designs as per IS-10262-2009</p>
+    <p><strong>Suitability:</strong> Used as RCC (Reinforced Cement Concrete) in the construction of slabs, beams, columns, footings, etc.</p>
+  </div>
+</div>
+  </div> */}
+
+{/* <div>
+  <div className="projects-grade-left">
+    <h3>Mixers</h3>
+    <ul>
+      <li>Premiere Mix</li>
+      <li>Residential Mix</li>
+      <li>Micro Tech Mix</li>
+      <li>Special Products</li>
+    </ul>
+</div>
+<div className="projects-grade-right">
+ <div className='mt-5'>
+  <p>A-MIX’s high-strength concrete has high compressive strength and is appropriate for high-rise buildings, long-span bridges, ultra-thin white topping and constructions in coastal areas, etc.
+  </p>
+  <p className='mt-5'>The concrete exhibits superior mechanical properties, including strength, durability, resistance to chemical attack and workability. It is achieved by adding higher but calibrated concentrations of mineral admixtures as compared to conventional concrete.</p>
+ </div>
+</div>
+  </div> */}
+
+{/* <div>
+  <div className="projects-grade-left">
+    <h3>Mixers</h3>
+    <ul>
+      <li>Premiere Mix</li>
+      <li>Residential Mix</li>
+      <li>Micro Tech Mix</li>
+      <li>Special Products</li>
+    </ul>
+</div>
+<div className="projects-grade-right">
+ <div className='mt-5'>
+  <p>A-MIX’s high-performance concrete with superior mechanical properties, including strength, durability, resistance to chemical attack and workability, is most suited for specialised applications.
+  </p>
+<ul style={{listStyleType:'disc'}} className='ms-5 fw-bold'>
+  <li>Floor Nation Mix</li>
+  <li>Fiber Mix</li>
+  <li>Enviro Mix</li>
+  <li>Poro Foam Mix</li>
+  <li>Waterproof Mix</li></ul> 
+</div>
+</div>
+  </div> */}
+  
+
+
 </div>
 
 {/* <h1 className='homeTitle'>Our Site Gallery</h1> */}
@@ -289,6 +424,20 @@ RMC‘s full form is Ready Mixed Concrete. It is manufactured in a batching plan
 <div className="lower-ellipse">
   <button>Watch All Videos</button>
 </div>
+</div>
+
+<div className="section-testimonials">
+  <div className="testimonials-desc">
+    <p>I couldn&apos;t have asked for a better place to call home than Vaishnavi RMC. From the moment I Connected into this vibrant community, I knew I had made the right choice. Everything here exceeded all my expectations, offering a perfect blend of Working. What truly sets Vaishnavi RMC One apart is the sense of belonging it provides – the friendly neighbours, the top-notch Machinery, and the beautifully Site surroundings. </p>
+  </div>
+  <img src={testimonyImg} alt="Testimonials Image" />
+  <div className='testimony-logo'>
+    <div>
+      <h1>Excellecy of Quality Standards</h1>
+      <h3>Ridhira Sheik</h3>
+      <p>Product Manager</p>
+    </div>
+  </div>
 </div>
 
     <div className="last-section">

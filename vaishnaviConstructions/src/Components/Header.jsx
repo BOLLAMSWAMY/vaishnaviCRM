@@ -3,7 +3,7 @@ import './header.css'
 const Header = () => {
   return (
     <>
-    <div className="header">
+    <div className="headerNew">
         <div>
             <a href="#"><i className="fa-solid fa-location-dot"> </i><span>Office Location</span></a>
             <button>Business Solutions</button>
