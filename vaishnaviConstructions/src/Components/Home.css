@@ -414,6 +414,108 @@ text-align: left;
   line-height: var(--lineheight336);
   text-align: left;
 }
+.section-five{
+    width: 100vw;
+    height: 500px;
+    background: url('../assets/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.section-five>div{
+    position: absolute;
+}
+.section-five img{
+    width: 100%;
+    height: 100%;
+}
+.section-five>div:first-child{
+    /* transform: scaleX(-90deg); */
+    left: -10%;
+    opacity: 40%;
+}
+.section-five>div+div{
+    top: -10%;
+    left: 25%;
+    width: 50%;
+    height: 550px;
+}
+.section-five>div+div+div{
+    top: 20%;
+    left: 70%;
+    width: 50%;
+    height: 350px;
+    opacity: 40%;
+}
+.Testimony{
+    width: 90%;
+    margin: auto;
+    height: 140px;
+    margin-top: 50px;
+}
+.Testimony img{
+    width: 100%;
+    height: 100%;
+}
+
+.sustainability{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:100px;
+}
+.sustainability-left{
+    width: 30%;
+    padding: 50px 50px 0px 50px;
+    /* border: 1px solid pink; */
+}
+.sustainability-left img{
+    width: 100%;
+    height: 100%;
+}
+.sustainability-right{
+    position: relative;
+    width: 70%;
+    /* border: 1px solid red; */
+   
+}
+.sustainability-right h1{
+    font-family: Kumbh Sans;
+font-size: 45px;
+font-weight: 400;
+line-height: 100px;
+letter-spacing: 3px;
+text-align: left;
+text-transform: uppercase;
+}
+.sustainability-right p{
+    font-family: Jost;
+    padding-right: 150px;
+font-size: 14px;
+font-weight: 400;
+line-height: 25.2px;
+text-align: left;
+margin-top: 20px;
+}
+.collaborate{
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: #FBA400;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.collaborate img{
+    width: 25%;
+    height: 40%;
+    object-fit: contain;
+}
+
 .rmcAdv {
   list-style-type: disc;
   display: flex;
@@ -444,6 +546,7 @@ text-align: left;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 .projects-grade>div{
     /* position: absolute; */
@@ -496,10 +599,66 @@ margin: 20px 0px;
     font-family: Saira Semi Condensed;
     margin: 10px 0px;
 }
+.site-gallery{
+    position: relative;
+    width: 100vw;
+    height: 700px;
+}
+.site-gallery .gallery{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.site-gallery .gallery img{
+    width: 24%;
+    height: 100%;
+    object-fit: cover;
+}
+.upper-ellipse{
+    position: absolute;
+    width: 120%;
+    top: -16%;
+    left: -10%;
+    background-color: #fff;
+    border-radius:50%;
+    padding: 50px;
+    z-index: 1;
+    padding-top: 80px;
+}
+.lower-ellipse{
+    position: absolute;
+    width: 120%;
+    bottom: -13%;
+    left: -8%;
+    background-color: #fff;
+    border-radius:50%;
+    padding: 80px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.lower-ellipse button{
+border: 1px solid ;
+padding: 10px 40px;
+border-radius: 25px;
+font-family: Gill Sans;
+font-size: 16px;
+font-weight: 600;
+line-height: 24.86px;
+letter-spacing: 0.08em;
+text-align: center;
+
+
+}
 .last-section {
+    z-index: 3;
   width: 85%;
   margin: auto;
   position: relative;
+  margin-top: 200px;
+  margin-bottom: 100px;
 }
 .last-info {
   width: 488px;

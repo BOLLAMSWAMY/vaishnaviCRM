@@ -7,6 +7,23 @@ import listType from '../assets/listType.png'
 import completedOne from '../assets/completed1.png'
 import completedTwo from '../assets/completed2.png'
 import completedThree from '../assets/completed3.png'
+import vehicleOne from '../assets/vehicleOne.png'
+import vehicleTwo from '../assets/vehicleTwo.png'
+import vehicleThree from '../assets/vehicleThree.png'
+import Testimony from '../assets/require.png'
+import companyOne from '../assets/company1.png'
+import companyTwo from '../assets/company2.png'
+import companyThree from '../assets/company3.png'
+import companyFour from '../assets/company4.png'
+import companyFive from '../assets/company5.png'
+import companySix from '../assets/company6.png'
+import companySeven from '../assets/company7.png'
+import companyEight from '../assets/company8.png'
+import site1 from '../assets/site1.png'
+import site2 from '../assets/site2.png'
+import site3 from '../assets/site3.png'
+import site4 from '../assets/site4.png'
+import sustainabilityImage from '../assets/sustainabilityImage.png'
 function Home() {
   return (
     <>
@@ -178,6 +195,44 @@ RMC‘s full form is Ready Mixed Concrete. It is manufactured in a batching plan
   </div>
 </div>
 
+<h1 className='homeTitle'>Our Vehicles</h1>
+
+<div className="section-five">
+<div>
+    <img src={vehicleThree} alt="" />
+  </div>
+  <div>
+    <img src={vehicleOne} alt="" />
+  </div>
+  <div>
+    <img src={vehicleTwo} alt="" />
+  </div>
+</div>
+
+<div className='Testimony'>
+  <img src={Testimony} alt="" />
+</div>
+
+<div className="sustainability">
+  <div className="sustainability-left">
+<img src={sustainabilityImage} alt="Sustainability Image" />
+  </div>
+  <div className="sustainability-right">
+<h1>Running Towards Sustainability</h1>
+<p>RMC‘s full form is Ready Mixed Concrete. It is manufactured in a batching plant or factory according to the standard specifications that are required. After being prepared it is delivered to the construction location in two different ways. The first way is using in-transit mixers which deliver the concrete mixture in a plastic state to the location. The second way is by using volumetric concrete mixer which delivers the material in the dry state and mixes it on the site.</p>
+<div className='collaborate'>
+<img src={companyOne} alt="Client Logo" />
+<img src={companyTwo} alt="Client Logo" />
+<img src={companyThree} alt="Client Logo" />
+<img src={companyFour} alt="Client Logo" />
+<img src={companyFive} alt="Client Logo" />
+<img src={companySix} alt="Client Logo" />
+<img src={companySeven} alt="Client Logo" />
+<img src={companyEight} alt="Client Logo" />
+</div>
+  </div>
+</div>
+
 <h1 className='homeTitle'>COMPLETED PROJECTS</h1>
 
 <div className="completed-projects">
@@ -219,7 +274,24 @@ RMC‘s full form is Ready Mixed Concrete. It is manufactured in a batching plan
   </div>
 </div>
 
-    <div className="last-section mt-5 mb-5 relative">
+{/* <h1 className='homeTitle'>Our Site Gallery</h1> */}
+
+<div className='site-gallery relative mt-3'>
+<div className='gallery'>
+<img src={site1} alt="Site Gallery Image" />
+<img src={site2} alt="Site Gallery Image" />
+<img src={site3} alt="Site Gallery Image" />
+<img src={site4} alt="Site Gallery Image" />
+</div>
+<div className='upper-ellipse'>
+<h1 className='homeTitle'>Our Site Gallery</h1>
+</div>
+<div className="lower-ellipse">
+  <button>Watch All Videos</button>
+</div>
+</div>
+
+    <div className="last-section">
       <img src={lastSec} alt="" />
       <div className='last-info absolute'>
         <h2>

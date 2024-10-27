@@ -107,3 +107,33 @@ text-align: center;
    justify-content: center;
    align-items: center;
 }
+
+@media only screen and (max-width: 426px){
+    .footer-mid>div>div{
+        width: 80%;
+        margin: 20px;
+    } 
+    .footer-mid>div{
+        height: 90%;
+        flex-wrap: wrap;
+    }
+    .footer{
+        height: 160vh;
+    }
+    .footer-mid button{
+        margin-left: 55px;
+    }
+    .footer-mid input{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .footer-top{
+        height: 25%;
+    }
+    .footer-mid{
+        height: 70%;
+    }
+    .footer-down{
+        height: 5%;
+    }
+}

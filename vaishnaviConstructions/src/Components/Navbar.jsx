@@ -7,6 +7,11 @@ const Navbar = () => {
 
   let [activeItem,setActiveItem]=useState('home')
 
+  let [isMobile,setMobile] = useState(false)
+
+  function handleMobileNav(){
+    setMobile(!isMobile)
+  }
   function handleActiveNav(active){
     setActiveItem(active)
   }
@@ -38,6 +43,32 @@ const Navbar = () => {
 
           <Link to="/brochure"><button>Download Brochure</button></Link>
         </div>
+            <div className="nav-mobile-handle" onClick={handleMobileNav}>
+              <i className="fa-solid fa-bars"></i>
+            </div>
+
+        <div className={isMobile ? 'navbar-mobile':'d-none navbar-mobile'}>
+            <Link to='/'><span  className={activeItem === 'home'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('home')
+            }}>Home</span></Link>
+          <Link to="/aboutus"><span  className={activeItem === 'about'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('about')
+            }}>About Us</span></Link>
+          <Link to="/services"><span  className={activeItem === 'services'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('services')
+            }}>Services</span></Link>
+
+          <Link to="/media"><span className={activeItem === 'media'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('media')
+            }}>Media</span></Link>
+
+          <Link to="/contactus"><span className={activeItem === 'contact'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('contact')
+            }}>Contact Us</span></Link>
+
+          <Link to="/brochure"><button>Download Brochure</button></Link>
+        </div>
+        
       </div>
     </>
   );
