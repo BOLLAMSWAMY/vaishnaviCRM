@@ -3,6 +3,16 @@
     cursor: pointer;
     color: #fff;
 }
+.footer h5{
+font-family: Kumbh Sans;
+font-size: 20px;
+font-weight: 500;
+line-height: 24.8px;
+text-align: left;
+margin-bottom: 15px;
+/* border-bottom: 1px solid #fff; */
+
+}
 .footer-top{
     width: 70%;
     height: 45%;
@@ -48,6 +58,14 @@ text-align: center;
     align-items: center;
 }
 .footer-mid>div{
+    height: 45%;
+    color: #fff;
+    text-wrap: wrap;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-mid>div>div{
     width: 23%;
     margin-left: 5px;
 }

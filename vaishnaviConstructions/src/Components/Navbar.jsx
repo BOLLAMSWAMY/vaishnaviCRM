@@ -2,12 +2,14 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import  Logo  from '../assets/vaishnaviLogo.png'
+import { useState } from "react";
 const Navbar = () => {
 
-    function activeNav(){
-        let navItems = document.getElementsByClassName('navItem');
-        console.log('navClicked',navItems);
-    }
+  let [activeItem,setActiveItem]=useState('home')
+
+  function handleActiveNav(active){
+    setActiveItem(active)
+  }
 
   return (
     <>
@@ -16,13 +18,23 @@ const Navbar = () => {
             <img src={Logo} alt="" width={250} height={90}/>
         </div>
         <div className="navbar-right">
-            <Link to='/'><span  className="active-nav navItem" onClick={activeNav}>Home</span></Link>
-          <Link to="/aboutus"><span  className="navItem" onClick={activeNav}>About Us</span></Link>
-          <Link to="/services"><span  className="navItem" onClick={activeNav}>Services</span></Link>
+            <Link to='/'><span  className={activeItem === 'home'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('home')
+            }}>Home</span></Link>
+          <Link to="/aboutus"><span  className={activeItem === 'about'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('about')
+            }}>About Us</span></Link>
+          <Link to="/services"><span  className={activeItem === 'services'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('services')
+            }}>Services</span></Link>
 
-          <Link to="/media"><span  className="navItem" onClick={activeNav}>Media</span></Link>
+          <Link to="/media"><span className={activeItem === 'media'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('media')
+            }}>Media</span></Link>
 
-          <Link to="/contactus"><span  className="navItem" onClick={activeNav}>Contact Us</span></Link>
+          <Link to="/contactus"><span className={activeItem === 'contact'?'active-nav navItem':'navItem'} onClick={()=>{
+              handleActiveNav('contact')
+            }}>Contact Us</span></Link>
 
           <Link to="/brochure"><button>Download Brochure</button></Link>
         </div>

@@ -8,6 +8,14 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
+  const companyData = {
+    founder:'Madhusudhan Reddy Nimma',
+    founderPosition:'Managing Director',
+    contact:'+91 7093320405',
+    email:'vaishnavireadymix@gmail.com',
+    address:'8-2-248/A/5/25, Venkateshwara Hills, Beside Tata Capital Road, RD No-3 Banjarahills, Hyderabad'
+  }
+
   // const [count, setCount] = useState(0)
 
   return (

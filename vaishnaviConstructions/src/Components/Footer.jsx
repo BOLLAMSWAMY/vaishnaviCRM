@@ -3,6 +3,8 @@ import './Footer.css'
 // import { Link } from 'react-router-dom'
 import Logo from '../assets/TransparentLogo.png'
 const Footer = () => {
+ 
+  
   return (
     <>
     <div className="footer">
@@ -21,6 +23,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='footer-mid'>
+          <div>
           <div>
             <h5>Get in touch</h5>
             <p>8-2-248/A/5/25, Venkateshwara Hills, Beside Tata Capital Road, RD No-3 Banjarahills, Hyderabad</p>
@@ -46,7 +49,8 @@ const Footer = () => {
             <input type="email" placeholder='Email'/> <br/>
             <input type="phone" placeholder='Phone'/> <br/>
         <button >Submit Now <i className='fa fa-arrow-right'></i></button>
-            </div>  
+            </div> 
+            </div> 
         </div>
         <div className='footer-down'>
             <p>2024 - Vaishnavi RMC. All rights reserved.</p>

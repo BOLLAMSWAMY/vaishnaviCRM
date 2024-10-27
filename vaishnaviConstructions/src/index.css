@@ -15,3 +15,7 @@ a{
   background-repeat: no-repeat;
   background-position: center;
 }
+input{
+  color: #585757;
+  outline-style: none;
+}
